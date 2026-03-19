@@ -9,7 +9,7 @@ from torch.utils.data import Dataset, DataLoader
 import kagglehub
 
 class DataModule(Dataset):
-    def __init__(self, root='data', split='train', batch_size=32, num_workers=4, image_resolution=64, max_images=-1, label_offset=1):
+    def __init__(self, root='data', split='train', batch_size=32, num_workers=4, image_resolution=64, max_images=-1, label_offset=0):
         self.root = Path(root) / split
         self.split = split
         self.batch_size = batch_size
